@@ -1,0 +1,22 @@
+/* image{
+
+} */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.simplilearn.com%2Fhighest-paying-jobs-in-india-article&psig=AOvVaw3LePipktHbZNdUSzj62lEk&ust=1704801174784000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCIia6rvdzYMDFQAAAAAdAAAAABAD'); /* Adjust the path accordingly */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+  }
+  
+  /* Add additional styling for other elements if needed */
+  /* C:\Users\SourabhSoni\OneDrive - Cubastion Consulting Pvt Ltd\Desktop\Angular\Job_app\src\assets\job image.jpg */
+ 
+.main-content{
+    border-color: black;
+}  
+#regis{
+  margin-top: 0%;
+  margin-left: 90%;
+}

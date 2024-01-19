@@ -1,5 +1,95 @@
 {
-  "jobs": [],
-  "users":[],
-  "employees":[]
+  "jobs": [
+    {
+      "id": 2,
+      "title": "lsj",
+      "description": "ljasvd",
+      "business_email": "Lwjfe",
+      "qualification": "LJH",
+      "salary_range": "lJ H"
+    },
+    {
+      "id": 3,
+      "title": null,
+      "description": null,
+      "business_email": null,
+      "qualification": null,
+      "salary_range": null
+    },
+    {
+      "id": 4,
+      "title": null,
+      "description": null,
+      "business_email": null,
+      "qualification": null,
+      "salary_range": null
+    }
+  ],
+  "users": [
+    {
+      "fullname": "Anna",
+      "email": "anna@test.com",
+      "mobile": 9900990099,
+      "password": "anna1234",
+      "education": "12th Fail",
+      "experience": "14 Years",
+      "skills": "Skills",
+      "id": 1
+    },
+    {
+      "fullname": "Raghu",
+      "user_type": "Employee",
+      "email": "raghu@test.com",
+      "mobile": 9191919191,
+      "password": "raghu123",
+      "education": "Education",
+      "experience": "Experience",
+      "skills": "Skills",
+      "id": 2
+    },
+    {
+      "fullname": "Jamal",
+      "user_type": "Employer",
+      "email": "jamal@test.com",
+      "mobile": 8181818181,
+      "password": "jamal123",
+      "education": "Ed",
+      "experience": "Ex",
+      "skills": "Skeels",
+      "id": 3
+    },
+    {
+      "fullname": "ram",
+      "user_type": "Employee",
+      "email": "ram@test.com",
+      "mobile": 1212121212,
+      "password": "ram12345",
+      "education": "ed",
+      "experience": "14",
+      "skills": "sk",
+      "id": 4
+    },
+    {
+      "fullname": "hojl",
+      "user_type": "Employer",
+      "email": "hkshdkfj@jlsdjlk.com",
+      "mobile": 8989889898,
+      "password": "68768686886",
+      "education": "kfljlkdj",
+      "experience": "kjfsdkljflk",
+      "skills": "Coding",
+      "id": 5
+    }
+  ],
+  "registrations": [
+    {
+      "fullname": "Diu",
+      "mobile": 1010101010,
+      "email": "diu@test.com",
+      "education": "Education Op",
+      "experience": "Experience Op",
+      "skills": "Skills Op",
+      "id": 1
+    }
+  ]
 }

@@ -1,4 +1,59 @@
-.nav{
+/* Styles for the navigation bar */
+.nav {
+    background-color: #333; /* Set the background color */
+  }
+  
+  /* Styles for the list items */
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  /* Styles for each list item */
+  .nav li {
+    margin-right: 10px; /* Add some spacing between list items */
+  }
+  
+  /* Styles for the links */
+  .nav a {
+    text-decoration: none;
+    color: white; /* Set the text color */
+    padding: 10px; /* Add padding to the links */
+    display: inline-block;
+  }
+  
+  /* Styles for the active link */
+  .nav .active-link {
+    background-color: #555; /* Set a different background color for the active link */
+  }
+  
+  /* Styles for the bold text within the links */
+  .nav a b {
+    font-weight: bold;
+  }
+  #zz{
+    margin-left: 100%;
+  }
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+/* .nav{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -53,4 +108,4 @@ nav div button{
   
 .btn {
     margin-top: 3px;
-  }
+  } */

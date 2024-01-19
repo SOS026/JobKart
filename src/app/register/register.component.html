@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Register</h1>
+            <h6>Please register yourself!!</h6>
+          </div>
+          <form>
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Full Name</label>
+                <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name" required>
+                <span class="text-danger" *ngIf="registerForm.controls['fullname'].dirty && registerForm.hasError('required','fullname')">*Full name is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+                <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number" required>
+                <span class="text-danger" *ngIf="registerForm.controls['mobile'].dirty && registerForm.hasError('required','mobile')">*Mobile number is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="Email" required email>
+                <span class="text-danger" *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')">*Email is required</span>
+                <!-- <div style="color:white; margin-top:10px" id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Education</label>
+                <input formControlName="education" type="text" class="form-control" id="exampleInputPassword1" placeholder="Education" required>
+                <span class="text-danger" *ngIf="registerForm.controls['education'].dirty && registerForm.hasError('required','education')">*This field is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Experience</label>
+                <input formControlName="experience" type="text" class="form-control" id="exampleInputPassword1" placeholder="Experience" required>
+                <span class="text-danger" *ngIf="registerForm.controls['experience'].dirty && registerForm.hasError('required','experience')">*This field is required</span>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Skills</label>
+                <input formControlName="skills" type="text" class="form-control" id="exampleInputPassword1" placeholder="Skills" required>
+                <span class="text-danger" *ngIf="registerForm.controls['skills'].dirty && registerForm.hasError('required','skills')">*This field is required</span>
+              </div>
+              <form>  
+                <div class="form-group">    
+                    <label for="exampleFormControlFile1">Resume</label>    
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">  
+                </div>
+              </form>
+              <br>
+              <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary mb-2">Register</button>
+            </form>
+            <a style="color:white; margin-top:10px" routerLink="/list-job">Already registered? Click here to login.</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

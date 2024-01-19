@@ -1,8 +1,10 @@
 export class User{
     id: number=0;
-    name: string ='';
+    fullname: string ='';
     email: string='';
+    mobile: number;
     education: string='';
     experience: string='';
     skills: string='';
+    user_type: string='';
 }

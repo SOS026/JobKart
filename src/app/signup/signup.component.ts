@@ -15,7 +15,9 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      fullname: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
+      fullname: ['', [Validators.required]],
+      // fullname: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
+      user_type: ['', Validators.required],
       email: ['', Validators.required],
       mobile: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]],
@@ -26,10 +28,11 @@ export class SignupComponent implements OnInit {
 
   }
   signUp() {
+    // debugger
     this.http.post<any>("http://localhost:3000/users", this.signupForm.value)
       .subscribe(res => {
         alert("Singup Successfull");
-        this.signupForm.reset();
+        this.signupForm.reset();        
         this.router.navigate(['login']);
       }, error => {
         alert("Something went wrong")

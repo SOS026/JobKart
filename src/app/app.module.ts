@@ -11,6 +11,11 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserprofilesComponent } from './userprofiles/userprofiles.component';
+import { ListjobComponent } from './listjob/listjob.component';
+import { ApiService } from './services/api.service';
+import { AuthService } from './services/auth.service';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -21,7 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     HelpcenterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    UserprofilesComponent,
+    ListjobComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ApiService, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

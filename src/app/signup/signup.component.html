@@ -8,6 +8,13 @@
           </div>
           <form>
             <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">User Type</label>
+                <select formControlName="user_type" class="form-control" id="exampleFormControlSelect1">
+                    <option>Employee</option>
+                    <option>Employer</option>
+                </select>
+              </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Full Name</label>
                 <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name" required>

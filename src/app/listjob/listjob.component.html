@@ -1,0 +1,120 @@
+<!-- <div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>Post Your Job Here!!</h3>
+            <p class="blue-text">If this is your dream job<br> fill this form and you will be one step ahead.</p>
+            <div class="card">
+               
+                <form>
+                    <div class="a">
+                        <div class="b"> <label class="d">Job Title<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Job Title" onblur="validate(1)"> </div>
+                        <div class="b"> <label class="d">Description<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Description" onblur="validate(2)"> </div>
+                    </div>
+                    <div class="a">
+                        <div class="b"> <label class="d">Who is hiring?<span class="text-danger"> *</span></label> <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)"> </div>
+                        <div class="b"> <label class="d">Business email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="" onblur="validate(3)"> </div>
+                    </div>
+                    <div class="a">
+                        <div class="b"> <label class="d">Qualifications<span class="text-danger"> *</span></label> <input type="text" id="job" name="job" placeholder="" onblur="validate(5)"> </div>
+                    </div>
+                    <div class="a">
+                        <div class="b"> <label class="d">Salary Range<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
+                    </div>
+                    <div class="c">
+                        <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Post Job</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <h1 style="color: white;">Add a Job</h1>
+      <div class="d-flex">
+        <button (click)="clickAddJob()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          class="btn btn-success">Add Job</button>
+        <button (click)="logout()" class="btn btn-danger mx-2">Logout</button>
+      </div>
+    </div>
+</nav>
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Job Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValue">
+  
+           
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Title</label>
+              <input type="text" formControlName="title" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Description</label>
+              <input type="text" formControlName="description" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Qualification</label>
+              <input type="text" formControlName="qualification" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Business Email</label>
+              <input type="text" formControlName="business_email" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Salary Range</label>
+                <input type="text" formControlName="salary_range" class="form-control" id="exampleInputPassword1">
+              </div>
+            
+          </form>
+        </div>
+  
+        <div class="modal-footer">
+          <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postJobDetails()" class="btn btn-primary">Add Job</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateJobDetails()" class="btn btn-primary">Update Job</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Job ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Qualification</th>
+        <th scope="col">Business Email</th>
+        <th scope="col">salary Range</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let row of jobData">
+        <td>{{row.id}}</td>
+        <td>{{row.title}}</td>
+        <td>{{row.description}}</td>
+        <td>{{row.qualification}}</td>
+        <td>{{row.business_email}}</td>
+        <td>{{row.salary_range}}</td>
+        <td>
+           
+          <button (click)="onEdit(row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            class="btn btn-info">Edit</button>
+          <button (click)="deleteJob(row)" class="btn btn-danger mx-3">Delete</button>
+           
+        </td>
+      </tr>
+    </tbody>
+  </table>
